@@ -2,5 +2,19 @@
     position: relative;
     text-align: center;
     background-size: cover;
-
+}
+.top-bar {
+    /*background-color: blue;*/
+    
+}
+.form-input {
+    border: 5px solid #8b03fa;
+    display: block;
+    padding: 7px 15px;
+    font-size: 24px;
+    color: #024e76;
+    margin-bottom: 15px;
+}
+.q-text {
+    font-size: 24px;
 }

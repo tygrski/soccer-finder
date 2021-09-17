@@ -10,6 +10,7 @@
   <body>
 
     <!-- Start Top Bar -->
+    
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
@@ -34,7 +35,17 @@
           <h2>Pick a local soccer field near you and kick it with other teams!</h2>
         </div>
       </div>
-    
+    <!-- about us -->
+    <setion id='about-us'>
+    <div class='medium-12 columns text-center'
+      <div class='about-me' id='abt-me'>
+        <h2 class='about-text'>About Us:</h2>
+        <p>As a colabrative effort to bring together the local soccer community in Austin,TX we have created this scheduler for you to find other soccer teams and players to improve your skills!</p>
+      </div> 
+    </div>
+    </setion>
+    <!-- about us end -->
+    <!-- step 1 start -->
     <section id='step-1' class='map'>
     <div class="row" id="content">
       <div class="medium-12 columns">
@@ -50,13 +61,26 @@
           </div>
         </div>
       </section>
-
+      <!-- step one end -->
+      <!-- step two start -->
       <section id='step-2' class='form'>
         <div class="row" id="content">
           <div class="medium-12 columns">
             <div class="blog-post">
               <h3>Step 2: <medium>Tell everyone about your team!</medium></h3>
-              <!-- form start git a-->
+              <!-- form start -->
+              <form class=form-input>
+                <label class='q-text' for='name'>Enter your team's name:</label>
+                <input type='text' placeholder="Team Name" name='team name' id='team-name' class='from-box' />
+                <label class='q-text' for='Team-captain'>Enter your captains name:</label>
+                <input type="text" placeholder="Team Captain" name='captain-name' id='captain' class='form-box' />
+                <label class='q-text' for='contact'>Enter contact information:</label>
+                <input type='tel' placeholder="Phone Number" name='phone' id='phone' class='form-box' />
+                <input type='email' placeholder="Email" name='email' id='email' class='form-box' />
+                <button class='btn' type="submit">
+                  Play!
+              </button>
+              </form>
               <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
               <div class="callout">
                 <ul class="menu simple">
