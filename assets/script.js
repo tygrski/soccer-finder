@@ -18,5 +18,5 @@
     //   map:map,
     // })
   };
-  initMap();
+  // initMap();
   
