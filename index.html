@@ -1,14 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/styles.css">
-  <title>Document</title>
-</head>
-<body>
-  
- <script src="assets/script.js"></script>
-</body>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pick-A-Kick</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body>
+
+    <!-- Start Top Bar -->
+    
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Pick-A-Kick</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#step-1">Step 1:</a></li>
+          <li><a href="#step-2">Step 2:</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+    <div class='hero-img'>
+      <img src='./assets/imgs/soccer-hero.jpeg' alt = 'soccer ball breaks through net'/>
+      <div>
+        <h1>Pick-A-Kick</h1></div>
+        <div>
+          <h2>Pick a local soccer field near you and kick it with other teams!</h2>
+        </div>
+      </div>
+    <!-- about us -->
+    <setion id='about-us'>
+    <div class='medium-12 columns text-center'
+      <div class='about-me' id='abt-me'>
+        <h2 class='about-text'>About Us:</h2>
+        <p>As a colabrative effort to bring together the local soccer community in Austin,TX we have created this scheduler for you to find other soccer teams and players to improve your skills!</p>
+      </div> 
+    </div>
+    </setion>
+    <!-- about us end -->
+    <!-- step 1 start -->
+    <section id='step-1' class='map'>
+    <div class="row" id="content">
+      <div class="medium-12 columns">
+        <div class="blog-post">
+          <h3>Step 1: <medium>Select your playing field!</medium></h3>
+          <!-- Insert map -->
+          <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+          <div class="callout">
+            <ul class="menu simple">
+              <li><a href="#">Author: Mike Mikers</a></li>
+              <li><a href="#">Comments: 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- step one end -->
+      <!-- step two start -->
+      <section id='step-2' class='form'>
+        <div class="row" id="content">
+          <div class="medium-12 columns">
+            <div class="blog-post">
+              <h3>Step 2: <medium>Tell everyone about your team!</medium></h3>
+              <!-- form start -->
+              <form class=form-input>
+                <label class='q-text' for='name'>Enter your team's name:</label>
+                <input type='text' placeholder="Team Name" name='team name' id='team-name' class='from-box' />
+                <label class='q-text' for='Team-captain'>Enter your captains name:</label>
+                <input type="text" placeholder="Team Captain" name='captain-name' id='captain' class='form-box' />
+                <label class='q-text' for='contact'>Enter contact information:</label>
+                <input type='tel' placeholder="Phone Number" name='phone' id='phone' class='form-box' />
+                <input type='email' placeholder="Email" name='email' id='email' class='form-box' />
+                <button class='btn' type="submit">
+                  Play!
+              </button>
+              </form>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+              <div class="callout">
+                <ul class="menu simple">
+                  <li><a href="#">Author: Mike Mikers</a></li>
+                  <li><a href="#">Comments: 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+       
+
+        
+      
+
+    <div class="row column">
+      <ul class="pagination" role="navigation" aria-label="Pagination">
+        <li class="disabled">Previous</li>
+        <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+        <li><a href="#" aria-label="Page 2">2</a></li>
+        <li><a href="#" aria-label="Page 3">3</a></li>
+        <li><a href="#" aria-label="Page 4">4</a></li>
+        <li class="ellipsis"></li>
+        <li><a href="#" aria-label="Page 12">12</a></li>
+        <li><a href="#" aria-label="Page 13">13</a></li>
+        <li><a href="#" aria-label="Next page">Next</a></li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script src="./assets/script.js"></script>
+    <script>
+      $(document).foundation();
+      
+    </script>
+  </body>
 </html>
