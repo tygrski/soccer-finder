@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pick-A-Kick</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="./assets/styles.css">
   </head>
   <body>
@@ -46,7 +47,7 @@
     </setion>
     <!-- about us end -->
     <!-- step 1 start -->
-    <section id='step-1' class='map'>
+    <section id='step-1'>
     <div class="row" id="content">
       <div class="medium-12 columns">
         <div class="blog-post">
@@ -62,6 +63,7 @@
         </div>
       </section>
       <!-- step one end -->
+      <div id="map"></div>
       <!-- step two start -->
       <section id='step-2' class='form'>
         <div class="row" id="content">
@@ -112,6 +114,8 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCFb78BrsQFhTZfLasUBGYwP6ffUgxpX3c&sensor=false" 
+   type="text/javascript"></script>
     <script src="./assets/script.js"></script>
     <script>
       $(document).foundation();
