@@ -169,8 +169,3 @@ for (var i = 0; i < locations.length; i++) {
 })(marker,i));
 }
 
-// addMarker({
-//   coords:{lat: 30.1980, lng: -97.8836},
-//   // content:'<h1>Slaughter Creek Fields 4</h1>'
-// });
-
