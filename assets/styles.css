@@ -20,6 +20,8 @@
 
 }
 
+
+
 h2 {
     font-size: 10px;
 }
@@ -46,7 +48,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-}
+ }
+
+
+
 .hero-text {
     position:absolute;
     text-align: center;

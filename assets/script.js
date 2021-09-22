@@ -18,7 +18,10 @@ nameSubmit.addEventListener("click", function (e) {
 });*/
 
 var forecastContainerEl = document.querySelector("#fiveday-container");
+
+
 var forecastTitle = document.querySelector("#forecast");
+
 
 var city = "Austin";
 var button = document.querySelector("#btn");
@@ -37,7 +40,10 @@ button.addEventListener("click", function (e) {
       console.log(response);
 
       forecastContainerEl.textContent = ""
+
+
       forecastTitle.textContent = "Please check upcoming weather conditions prior to picking a date to play";
+
     
 
       var forecast = response.list;
