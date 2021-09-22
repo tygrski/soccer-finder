@@ -154,7 +154,7 @@ var map = new google.maps.Map(document.getElementById("map"), {
 const infowindow = new google.maps.InfoWindow();
 
 for (var i = 0; i < locations.length; i++) {
-  console.log(locations[i][1], locations[i][2]);
+  
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
     map: map,
