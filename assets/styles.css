@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +20,67 @@
 
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(169, 228, 239, 0.5);
+}
+.hero-img {
+    background-image: url(./imgs/soccer-hero.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    display:flex;
+    height: 80vh;
+    width: 100vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+ }
 
+.hero-text {
+    position:absolute;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(202, 160, 207, 0.8);
+    padding: 270px; 
+    
+}
 
+/*.hero-border {
+    border: 3px solid #ffef0a;
+    border-style: inset;
+    border-radius: 5px;
+    padding: 
+}*/
 
+.orange {
+    background-color: rgba(169, 228, 239, 1);
+}
 
-
+.form-input {
+    border: 5px solid #8b03fa;
+    display: block;
+    padding: 7px 15px;
+    font-size: 24px;
+    color: #024e76;
+    margin-bottom: 15px;
+}
+.q-text {
+    font-size: 24px;
+}
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+height: 60%;
+width:40%;
+}
+      
+/*Optional: Makes the sample page fill the window. */
+html,
+body {
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+} 
 
