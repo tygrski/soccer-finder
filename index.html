@@ -4,40 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pick-A-Kick</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link rel="stylesheet" href="./assets/styles.css">
   </head>
   <body>
 
     <!-- Start Top Bar -->
+    <header>
     
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text">Pick-A-Kick</li>
+    <div class="top-bar orange">
+      <div class="top-bar-left orange">
+        <ul class="menu orange">
+          <li class="menu-text orange">Pick-A-Kick</li>
         </ul>
       </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#step-1">Step 1:</a></li>
-          <li><a href="#step-2">Step 2:</a></li>
+      <div class="top-bar-right orange">
+        <ul class="menu orange">
+          <li class='orange'><a href="#about-us">About Us</a></li>
+          <li class='orange'><a href="#step-1">Step 1:</a></li>
+          <li class='orange'><a href="#step-2">Step 2:</a></li>
         </ul>
       </div>
     </div>
+  </header>
     <!-- End Top Bar -->
-
+    <section class='hero'>
     <div class='hero-img'>
-      <img src='./assets/imgs/soccer-hero.jpeg' alt = 'soccer ball breaks through net'/>
-      <div>
-        <h1>Pick-A-Kick</h1></div>
-        <div>
+      <div class='hero-text hero-border'>
+        <h1>Pick-A-Kick</h1> 
           <h2>Pick a local soccer field near you and kick it with other teams!</h2>
         </div>
       </div>
+    </section>
     <!-- about us -->
     <setion id='about-us'>
-    <div class='medium-12 columns text-center'
+    <div class='medium-12 columns text-center'>
       <div class='about-me' id='abt-me'>
         <h2 class='about-text'>About Us:</h2>
         <p>As a colabrative effort to bring together the local soccer community in Austin,TX we have created this scheduler for you to find other soccer teams and players to improve your skills!</p>
@@ -46,21 +48,17 @@
     </setion>
     <!-- about us end -->
     <!-- step 1 start -->
-    <section id='step-1' class='map'>
+    <section id='step-1' >
     <div class="row" id="content">
       <div class="medium-12 columns">
         <div class="blog-post">
           <h3>Step 1: <medium>Select your playing field!</medium></h3>
           <!-- Insert map -->
-          <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-          <div class="callout">
-            <ul class="menu simple">
-              <li><a href="#">Author: Mike Mikers</a></li>
-              <li><a href="#">Comments: 3</a></li>
-            </ul>
-          </div>
         </div>
       </section>
+
+        <div id='map'></div>
+ 
       <!-- step one end -->
       <!-- step two start -->
       <section id='step-2' class='form'>
@@ -112,10 +110,12 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCFb78BrsQFhTZfLasUBGYwP6ffUgxpX3c&sensor=false" 
+    type="text/javascript"></script>
     <script src="./assets/script.js"></script>
     <script>
       $(document).foundation();
-      
     </script>
+   
   </body>
 </html>
