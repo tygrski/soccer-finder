@@ -43,7 +43,8 @@ var locations = [
   
 // //  add marker
 //   function addMarker(coords){
-   
+ 
+
 //   }
 // };
 // center: {lat: 30.266666, lng:-97.733330}
