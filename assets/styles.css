@@ -1,4 +1,30 @@
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.temp {
+    font-size: 22px;
+    line-height: normal;
+}
+
+.city-title {
+    font-size: 22px;
+    line-height: 0;
+}
+
+.text-description {
+    line-height: normal;
+    font-size: 13px;
+
+}
+
+h2 {
+    font-size: 10px;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -137,3 +163,4 @@ width: 100%;
 margin: 0;
 padding: 0;
 } 
+

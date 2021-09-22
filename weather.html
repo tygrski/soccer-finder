@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="row">
+    <div class="small-2 large-4 columns">...</div>
+    <div class="small-4 large-4 columns">...</div>
+    <div class="small-6 large-4 columns">...</div>
+  </div>
+  
+  <div id="response-container"></div>
+
+  <div id="response-container" class="container hidden">
+    <div class="row">
+      <div class="col-md-3">
+        <form>
+          <label for="zsearch">Search Zipcode:</label>
+          <input type="search" id="input-value" name="s" placeholder="Enter a city...">
+          <button id="search-btn">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <a href="index.html"><button class="btn">Next</button></a>
+
+  
+ <script src="assets/script.js"></script>
+ <!-- Compressed JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+<div class="col-md-8 text-center mt-auto mb-auto text-light">
+  <div class="row">
+    
+      <div class="col" id="day"></div>
+      <div id="day-icon"></div>
+      <div class="col" id="temperature">
+        <div class="row">
+          <div class="col-6" id="high"></div>
+          <div class="col-6" id="low"></div>
+        </div>
+      </div>
+    
+  </div>
+  
+</div>
+
+
+<div class="container bg-info color ">
+  <div class="row align-items-start">
+    <div class="col-md-4 text-center text-light">
+      <div class="row align-items-start">
+        <div id="current-name" class="col-md-4 ml-auto mt-auto mb-auto"></div>
+        <div id="current-icon" class="col-md-4 ml-auto mt-auto mb-auto"></div>
+        <div id="current-description" class="col-md-4 mt-auto mb-auto text-center">
+          <div class="col-12 mt-auto mb-auto" id="number"></div> 
+          <div class="col-12 mt-auto mb-auto" id="text"></div> 
+        </div>
+      </div>
+    </div> 
+    <div class="col-md-8 text-center mt-auto mb-auto text-light">
+    </div>
+  </div>
+</div>
