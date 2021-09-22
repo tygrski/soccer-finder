@@ -163,6 +163,15 @@ for (var i = 0; i < locations.length; i++) {
   marker.addListener("click",(function(marker, i)  {
   
   return  function() {
+   
+     listItem = document.createElement('li');
+
+    // Add the item text
+    listItem.innerHTML = locations[i][0];
+  
+    // Add listItem to the listElement
+    fieldList.appendChild(listItem)
+    
     infowindow.setContent(locations[i][0])
     infowindow.open(map, marker)
   }
