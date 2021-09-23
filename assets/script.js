@@ -7,7 +7,6 @@ var locations = [
   ["Quarry Field", 30.3992, -97.7358],
 ];
 
-// map display and markers
 
 var map = new google.maps.Map(document.getElementById("map"), {
   zoom: 10,
@@ -23,10 +22,12 @@ for (var i = 0; i < locations.length; i++) {
   });
   
   marker.addListener("click",(function(marker, i)  {
-  
+    
   return  function() {
-    infowindow.setContent(locations[i][0])
+    infowindow.setContent(`<h1>${locations[i][0]}</h1><button onclick="displayEvent(this)" data-location-name="${locations[i][0]}">Check Events</button>`)
     infowindow.open(map, marker)
+
+    
   }
 })(marker,i));
 }
@@ -35,3 +36,22 @@ for (var i = 0; i < locations.length; i++) {
 //   coords:{lat: 30.1980, lng: -97.8836},
 //   // content:'<h1>Slaughter Creek Fields 4</h1>'
 // });
+
+
+
+// displaying the form for the calendar
+$(document).ready(function(){
+  var date_input=$('input[name="date"]'); //our date input has the name "date"
+  var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+  date_input.datepicker({
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+  })
+})
+
+// calendar section end
+
+
+
