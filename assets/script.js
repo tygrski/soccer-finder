@@ -151,8 +151,8 @@ const infowindow = new google.maps.InfoWindow();
 var events = new Map();
 // events.set("Slaughter Creek Fields 4",[{teamName: "Paul",teamCaptain: "George", phoneNumber: "512", email: "email", date: "09/04/2021"}]);
 // events.set("Onion Creek Soccer Complex",[{teamName: "Paul",teamCaptain: "George", phoneNumber: "512", email: "email", date: "09/04/2021"}]);
-addEventToMap("Slaughter Creek Fields 4", "Wolf", "George", "512-555-5555", "@email", "9/24/2021");
-addEventToMap("Slaughter Creek Fields 4", "Wild Cats", "Rey", "512-123-4567", "@email", "10/25/2021");
+addEventToMap("Slaughter Creek Fields 4", "Wolf", "George", "512-555-5555", "CaptainGeorge@email", "9/24/2021","5");
+addEventToMap("Slaughter Creek Fields 4", "Wild Cats", "Rey", "512-123-4567", "CaptainRey123@email", "10/25/2021","7");
 // map display and markers
 
 var map = new google.maps.Map(document.getElementById("map"), {
@@ -238,13 +238,14 @@ var teamName = document.querySelector("#team-name");
 var teamCaptain = document.querySelector("#captain");
 var phoneNumber = document.querySelector("#phone");
 var email = document.querySelector("#email");
+var playerAmount = document.querySelector("#player-amount");
 var newEvent = document.querySelector("#new-event");
+
 console.log(submitBtn);
 //var locationOne = document.querySelector("#location-one").focus();
 submitBtn.addEventListener("click", function () {
   event.preventDefault();
   
-  var fieldInfo = document.querySelector("table").text;
   $('#startdate').val()
   //var locationTable = document.querySelector("#location-table");
   //locationTable.removeAttribute("class");
@@ -253,13 +254,16 @@ submitBtn.addEventListener("click", function () {
   var teamCaptainValue = teamCaptain.value;
   var phoneNumberValue = phoneNumber.value;
   var emailValue = email.value;
-  console.log(dateValue);
-  console.log(teamNameValue);
-  console.log(teamCaptainValue);
-  console.log(phoneNumberValue);
-  console.log(emailValue);
-  console.log(fieldInfo);
-  addEventToMap("Slaughter Creek Fields 4",teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue)
+  var playerAmountValue = playerAmount.value;
+
+  // console.log(dateValue);
+  // console.log(teamNameValue);
+  // console.log(teamCaptainValue);
+  // console.log(phoneNumberValue);
+  // console.log(emailValue);
+  
+  // console.log(playerAmountValue);
+  addEventToMap("Slaughter Creek Fields 4",teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue,playerAmountValue)
   // event.preventDefault();
   // create the event list/values
   // var eventHeader = document.createElement("h3");
@@ -277,8 +281,8 @@ function createCell(cellValue, row) {
 }
 
 // creates new events, into our event storage
-function addEventToMap(fieldName, teamName, teamCaptain, phoneNumber, email, date) {
-  const locationDetails = { teamName: teamName, teamCaptain: teamCaptain, phoneNumber: phoneNumber, email: email, date: date};
+function addEventToMap(fieldName, teamName, teamCaptain, phoneNumber, email, date, players) {
+  const locationDetails = { teamName: teamName, teamCaptain: teamCaptain, phoneNumber: phoneNumber, email: email, date: date, players:players};
   if (events.has(fieldName)) {
     events.get(fieldName).push(locationDetails);
   }
