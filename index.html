@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link rel="stylesheet" href="./assets/styles.css">        
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
+ </head>
 
   <body>
 
@@ -145,7 +144,87 @@
               </button>
               </form>
             </div>
+
+
+             <!-- calendar start -->
+    <section id='step-1'>
+      <div class="row" id="content">
+        <div class="medium-12 columns">
+          <div class="blog-post">
+            <div id="calendar">
+              <div class="bootstrap-iso">
+                <div class="container-fluid">
+                 <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+               
+                   <!-- Form code begins -->
+                   <form method="post">
+                     <div class="form-group"> <!-- Date input -->
+                       <label class="control-label" for="date">Date</label>
+                       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                     </div>
+                     <div class="form-group"> <!-- Submit button -->
+                       <!-- <button class="btn btn-primary " id="submit" name="submit" type="submit">Submit</button> -->
+                     </div>
+                    </form>
+                    <!-- Form code ends --> 
+               
+                   </div>
+                 </div>    
+                </div>
+               </div>
+            </div>
+
+            <!-- The created event -->
+            <div id="new-event">
+              <table id="location-table"class="hide">
+                <thead>
+                  <tr>
+                    <th colspan="5" class="th">Slaughter Creek Fields 4</th>
+                    
+                  </tr>
+                  <tr>
+                    <th width="200">Team Name</th>
+                    <th>Team Captain</th>
+                    <th width="150">Phone Number</th>
+                    <th width="150">Email</th>
+                    <th width="150">Date</th>
+                  </tr>
+                </thead>
+                <tbody id="t-body">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Step 1: <medium>Select your playing field!</medium></h3>
+            
+            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+            <div class="callout">
+              <ul class="menu simple">
+                <li><a href="#">Author: Mike Mikers</a></li>
+                <li><a href="#">Comments: 3</a></li>
+              </ul>
+            </div>
           </div>
+        </section>
+        <!-- calendar ends -->
           </section>
 
 
@@ -157,9 +236,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>  
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCFb78BrsQFhTZfLasUBGYwP6ffUgxpX3c" type="text/javascript"></script>
-    <script>$(document).foundation();</script>
+
+    <!-- Include Date Range Picker -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCFb78BrsQFhTZfLasUBGYwP6ffUgxpX3c&sensor=false" 
+   type="text/javascript"></script>
     <script src="./assets/script.js"></script>
+    <script>
+      $(document).foundation();
+      
+    </script>
   </body>
   <footer>
     <div>
