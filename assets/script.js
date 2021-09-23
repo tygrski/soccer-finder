@@ -134,6 +134,7 @@ button.addEventListener("click", function (e) {
        
   
     });
+  
 });
 
 // google map fields markers
