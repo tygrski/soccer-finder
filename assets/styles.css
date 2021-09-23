@@ -1,33 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.temp {
-    font-size: 22px;
-    line-height: normal;
-}
-
-.city-title {
-    font-size: 22px;
-    line-height: 0;
-}
-
-.text-description {
-    line-height: normal;
-    font-size: 13px;
-
-}
-
-h2 {
-    font-size: 10px;
-}
-
-/*header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}*/
 .hero-img {
     background-image: url(./imgs/soccer-hero.jpeg);
     background-size: cover;
@@ -76,9 +46,16 @@ a {
     color: #024e76;
     width: 100%;
     background-color:rgba(255, 239, 10, 0.5);
-    margin-left: 410px;
-    
-    
+    margin: auto;    
+}
+
+.step-1 {
+    padding: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #fea520;
+    text-shadow: 0 0 10px rgba(202, 160, 207, 0.7);
+    text-align: center;
 }
 .q-text {
     font-size: 24px;
@@ -103,13 +80,7 @@ a {
     font-weight: bold;
     text-shadow: 0 0 10px rgba(202, 160, 207, 0.7);
 }
-.step-1 {
-    padding: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    color: #fea520;
-    text-shadow: 0 0 10px rgba(202, 160, 207, 0.7);
-}
+
 .btn {
     color: #caa0cf;
     background-color: #3069c5;
@@ -119,16 +90,28 @@ a {
     font-size: 24px;
     border-radius: 10px;
 }
+.wbtn {
+    color: #3069c5;
+    background-color: rgba(202, 160, 207, 0.7);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 10px;
+}
 footer {
     background-image: url(./imgs/footer.jpg);
-    margin-top: 100px;
-    background-size: cover;
+    background-size:cover;
     background-position:center;
-    height: 100;
+    margin-top: 100px;
     width: 100;
+    height: 100;
+    
+    
+    
 }
 footer h2 {
-    padding: 180px 0px 0px 0px;
+    padding: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     text-align: bottom; 
@@ -155,13 +138,12 @@ margin: 0;
 padding: 0;
 background-color: rgba(203, 239, 246, 1);
 } 
-
-#btn {
-    background-color: rgba(202, 160, 207, 0.5);
-    color:#fea520;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: none;
-    padding: 10px 20px;
-    font-size: 24px;
-    border-radius: 10px
-}
+.th {
+    height: 80px;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .hide{
+      display:none;
+  }

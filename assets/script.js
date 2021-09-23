@@ -147,7 +147,14 @@ var locations = [
 var fieldList = document.getElementById("selected-fields")
 const infowindow = new google.maps.InfoWindow();
 
-// map display and center to selected city(Austin)
+// events map
+var events = new Map();
+// events.set("Slaughter Creek Fields 4",[{teamName: "Paul",teamCaptain: "George", phoneNumber: "512", email: "email", date: "09/04/2021"}]);
+// events.set("Onion Creek Soccer Complex",[{teamName: "Paul",teamCaptain: "George", phoneNumber: "512", email: "email", date: "09/04/2021"}]);
+addEventToMap("Slaughter Creek Fields 4", "Wolf", "George", "512-555-5555", "@email", "9/24/2021");
+addEventToMap("Slaughter Creek Fields 4", "Wild Cats", "Rey", "512-123-4567", "@email", "10/25/2021");
+// map display and markers
+
 var map = new google.maps.Map(document.getElementById("map"), {
   zoom: 10,
   center: new google.maps.LatLng(30.266666, -97.73333),
@@ -161,24 +168,123 @@ for (var i = 0; i < locations.length; i++) {
     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
     map: map,
   });
-  
-  // function to display locations on marker and add to a list
-  marker.addListener("click",(function(marker, i)  {
-  
-    return  function() {
-    
-    listItem = document.createElement('li');
 
-    // Add the item text
-    listItem.innerHTML = locations[i][0];
-  
-    // Add listItem to the listElement
-    fieldList.appendChild(listItem)
-    
-    // display location name on marker
-    infowindow.setContent(locations[i][0])
-    infowindow.open(map, marker)
-  }
-})
-(marker,i));
+  marker.addListener("click", (function (marker, i) {
+
+    return function () {
+      infowindow.setContent(`<h1>${locations[i][0]}</h1 class="table"><button onclick="displayEvent(this)" data-location-name="${locations[i][0]}"> Events</button>`)
+      infowindow.open(map, marker)
+
+
+    }
+  })(marker, i));
 }
+
+// addMarker({
+//   coords:{lat: 30.1980, lng: -97.8836},
+//   // content:'<h1>Slaughter Creek Fields 4</h1>'
+// });
+
+// 
+function displayEvent(evt) {
+  var locationTable = document.querySelector("#location-table");
+  locationTable.removeAttribute("class");
+  var tBody = document.querySelector("#t-body");
+  const locationName = evt.dataset.locationName;
+  
+  if (events.has(locationName)) {
+    const locationEvents = events.get(locationName);
+    
+
+    // empty out the tbodies
+    tBody.innerHTML = "";
+    // creating new rows 
+    for (let index = 0; index < locationEvents.length; index++) {
+      const locationOfEvent = locationEvents[index];
+
+
+      var row = document.createElement("tr");
+
+      // itterate through the properties in the object
+      for (const property in locationOfEvent) {
+        if (Object.hasOwnProperty.call(locationOfEvent, property)) {
+          const propertyValue = locationOfEvent[property];
+          createCell(propertyValue, row);
+        }
+      }
+
+      tBody.appendChild(row);
+    }
+  }
+
+}
+
+
+// displaying the form for the calendar
+$(document).ready(function () {
+  var date_input = $('input[name="date"]'); //our date input has the name "date"
+  var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+  date_input.datepicker({
+    format: 'mm/dd/yyyy',
+    container: container,
+    todayHighlight: true,
+    autoclose: true,
+  })
+})
+// calendar section start
+var submitBtn = document.querySelector("#submit");
+var date = document.querySelector("#date");
+var teamName = document.querySelector("#team-name");
+var teamCaptain = document.querySelector("#captain");
+var phoneNumber = document.querySelector("#phone");
+var email = document.querySelector("#email");
+var newEvent = document.querySelector("#new-event");
+console.log(submitBtn);
+//var locationOne = document.querySelector("#location-one").focus();
+submitBtn.addEventListener("click", function () {
+  event.preventDefault();
+  
+  var fieldInfo = document.querySelector("table").text;
+  $('#startdate').val()
+  //var locationTable = document.querySelector("#location-table");
+  //locationTable.removeAttribute("class");
+  var dateValue = date.value;
+  var teamNameValue = teamName.value;
+  var teamCaptainValue = teamCaptain.value;
+  var phoneNumberValue = phoneNumber.value;
+  var emailValue = email.value;
+  console.log(dateValue);
+  console.log(teamNameValue);
+  console.log(teamCaptainValue);
+  console.log(phoneNumberValue);
+  console.log(emailValue);
+  console.log(fieldInfo);
+  addEventToMap("Slaughter Creek Fields 4",teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue)
+  // event.preventDefault();
+  // create the event list/values
+  // var eventHeader = document.createElement("h3");
+  // eventHeader.appendChild(dateValue);
+  // console.log(eventHeader);
+  // newEvent.appendChild(eventHeader);
+
+})
+
+// create cell add to row
+function createCell(cellValue, row) {
+  var cell = document.createElement("td");
+  cell.innerHTML = cellValue;
+  row.appendChild(cell);
+}
+
+// creates new events, into our event storage
+function addEventToMap(fieldName, teamName, teamCaptain, phoneNumber, email, date) {
+  const locationDetails = { teamName: teamName, teamCaptain: teamCaptain, phoneNumber: phoneNumber, email: email, date: date};
+  if (events.has(fieldName)) {
+    events.get(fieldName).push(locationDetails);
+  }
+  else {
+    events.set(fieldName, [locationDetails]);
+  }
+}
+// calendar section end
+
