@@ -1,25 +1,169 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <title>Simple Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pick-A-Kick</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="./assets/styles.css" />
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">               
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
-  <body>
-    <h3>Select your fields from the map below</h4>
-    <div id="map">
-     </div>
-     <section>
-     <p>Your fileds :</p>
-   </section>
-   <script src="http://maps.google.com/maps/api/js?key=AIzaSyCFb78BrsQFhTZfLasUBGYwP6ffUgxpX3c&sensor=false" 
-   type="text/javascript"></script>
-   <script src="./assets/script.js"></script>
 
-   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <!-- <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFb78BrsQFhTZfLasUBGYwP6ffUgxpX3c&callback=initMap&v=weekly"
-      async
-    ></script> -->
+  <body>
+
+    <!-- Start Top Bar -->
+    <header>
+      
+      <div class="top-bar orange">
+        <div class="top-bar-left orange">
+          <ul class="menu orange">
+            <li class="menu-text orange">Pick-A-Kick</li>
+          </ul>
+        </div>
+        <div class="top-bar-right orange">
+          <ul class="menu orange">
+            <li class='orange'><a href="#about-us">About Us</a></li>
+            <li class='orange'><a href="#step-1">Step 1:</a></li>
+            <li class='orange'><a href="#step-2">Step 2:</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- End Top Bar -->
+
+    <section class='hero'>
+      <div class='hero-img'>
+       
+        <!-- begin weather display  -->
+      
+      <div id="disappear" class="btn-color container">
+        <div id="dose" class="row justify-content-center">
+          <button type="button" class="btn btn-light text-dark p-2 m-3" style="display: block;" id="btn">Display Weather Forecast</button>
+        </div>
+      </div>
+
+      <div id="toggle" class="container">
+        <h2 class= "text-info font-weight-light text-dark text-center col-12" style="display: block;" id = "forecast"></h2>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 p-8 text-center text-dark">
+            <div class="row ">
+              <div id="current-name" class="col-sm-4 ml-auto mt-auto mb-auto"></div>
+              <div id="current-icon" class="col-sm-4 ml-auto mt-auto mb-auto"></div>
+              <div id="current-description" class="col-sm-4 mt-auto mb-auto text-center">
+                <div class="col-12 mt-auto mb-auto" id="number"></div> 
+                <div class="col-12 mt-auto mb-auto" id="text"></div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 text-center align-items-center">
+            <div class = "d-flex" id = "fiveday-container"></div>
+          </div> 
+        </div>
+      </div>
+   
+    <!-- end weather display -->
+   
+      <div class='hero-text hero-border'>
+        <h1 class='font'>Pick-A-Kick</h1> 
+        <h2 class='font'>Pick a local soccer field near you and kick it with other teams!</h2>
+      </div>
+    </section>
+
+    <!-- begin about us -->
+    <setion id='about-us'>
+      <div class='medium-12 columns text-center'>
+        <div class='about-me' id='abt-me'>
+          <h2 class='about-text'>About Us:</h2>
+          <p class='primary-border'>As a colabrative effort to bring together the local soccer community in Austin,TX we have created this scheduler for you to find other soccer teams and players to improve your skills!</p>
+        </div> 
+      </div>
+    </setion>
+    <!-- about us end -->
+
+
+    
+    <!-- step 1 start -->
+    <section id='step-1' >
+      <div class="row" id="content">
+        <div class="medium-12 columns">
+          <div class="blog-post">
+            <h3 class='step-1'>Step 1: <medium>Select your playing field!</medium></h3>
+            <!-- Insert map -->
+          </div>
+      </div>
+    </section
+
+    <!-- map display -->
+    <div id='map'></div>
+    <section>
+      <p>Your fileds :</p>
+       <ul id="selected-fields">
+       </ul>
+   </section>
+
+    <!-- step one end -->
+
+    <!-- step two start -->
+    <section id='step-2' class='form'>
+      <div class="row" id="content">
+        <div class="blog-post">
+          <h3 class='step-1'>Step 2: <medium>Tell everyone about your team!</medium></h3>
+
+          <!-- form start -->
+          <div class='row'>
+            <div class='columns'>
+            <form class='form-input'>
+              <label class='q-text' for='name'>Enter your team's name:</label>
+              <input type='text' placeholder="Team Name" name='team name' id='team-name' class='from-box' />
+              <label class='q-text' for='Team-captain'>Enter your captains name:</label>
+              <input type="text" placeholder="Team Captain" name='captain-name' id='captain' class='form-box' />
+              <label class='q-text' for='amount of players'>Enter amount of team members:</label>
+              <select type='text' placeholder="Number of Members" name='amount' id='player-amount' class='form-box'>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+                <label class='q-text' for='contact'>Enter contact information:</label>
+                <input type='tel' placeholder="Phone Number" name='phone' id='phone' class='form-box' />
+                <input type='email' placeholder="Email" name='email' id='email' class='form-box' />
+                <button class='btn' type="submit">
+                  Play!⚽️
+              </button>
+              </form>
+            </div>
+          </div>
+          </section>
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>  
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCFb78BrsQFhTZfLasUBGYwP6ffUgxpX3c" type="text/javascript"></script>
+    <script>$(document).foundation();</script>
+    <script src="./assets/script.js"></script>
   </body>
+  <footer>
+    <div>
+      <h2> Made by Error-404 &copy; 2021 Pick-A-Kick, Inc</h2>
+    </div>
+  </footer>
 </html>
