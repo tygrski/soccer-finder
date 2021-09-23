@@ -156,6 +156,7 @@ width:50%;
 border:#ffef0a solid 5px;
 border-radius: 10px;
 border-style: groove;
+margin: auto;
 }
       
 /*Optional: Makes the sample page fill the window. */
