@@ -145,14 +145,17 @@ var locations = [
   ["Quarry Field", 30.3992, -97.7358],
 ];
 
-// map display and markers
+var fieldList = document.getElementById("selected-fields")
+const infowindow = new google.maps.InfoWindow();
 
+
+// map display and markers
 var map = new google.maps.Map(document.getElementById("map"), {
   zoom: 10,
   center: new google.maps.LatLng(30.266666, -97.73333),
 });
-const infowindow = new google.maps.InfoWindow();
 
+// loop through locations array
 for (var i = 0; i < locations.length; i++) {
   
   var marker = new google.maps.Marker({
@@ -160,6 +163,7 @@ for (var i = 0; i < locations.length; i++) {
     map: map,
   });
   
+//   function to display locations on marker after clicked and add to list
   marker.addListener("click",(function(marker, i)  {
   
   return  function() {
