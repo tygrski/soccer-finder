@@ -1,33 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.temp {
-    font-size: 22px;
-    line-height: normal;
-}
-
-.city-title {
-    font-size: 22px;
-    line-height: 0;
-}
-
-.text-description {
-    line-height: normal;
-    font-size: 13px;
-
-}
-
-h2 {
-    font-size: 10px;
-}
-
-/*header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}*/
 .hero-img {
     background-image: url(./imgs/soccer-hero.jpeg);
     background-size: cover;
@@ -155,13 +125,12 @@ margin: 0;
 padding: 0;
 background-color: rgba(203, 239, 246, 1);
 } 
-
-#btn {
-    background-color: rgba(202, 160, 207, 0.5);
-    color:#fea520;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: none;
-    padding: 10px 20px;
-    font-size: 24px;
-    border-radius: 10px
-}
+.th {
+    height: 80px;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .hide{
+      display:none;
+  }
