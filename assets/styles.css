@@ -51,7 +51,7 @@ body {
 
 
 .hero-text {
-    position:absolute;
+    position:relative;
     text-align: center;
     text-shadow: 0 0 10px rgba(202, 160, 207, 0.9);
     padding: 270px; 
@@ -86,11 +86,10 @@ a {
     border:#ffef0a solid 5px;
     border-radius: 10px;
     border-style: groove;
-    display: block;
     padding: 45px 40px;
+    margin: auto;
     font-size: 24px;
     color: #024e76;
-    margin-bottom: 15px;
     width: 100%;
     background-color:rgba(255, 239, 10, 0.5);
 }
