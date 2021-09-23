@@ -92,7 +92,7 @@ button.addEventListener("click", function (e) {
         forecastContainerEl.appendChild(forecastEl);
     }
 
-
+      $(‘button’).hide() 
        
     });
 
