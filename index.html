@@ -139,48 +139,42 @@
                 <label class='q-text' for='contact'>Enter contact information:</label>
                 <input type='tel' placeholder="Phone Number" name='phone' id='phone' class='form-box' />
                 <input type='email' placeholder="Email" name='email' id='email' class='form-box' />
-                <button class='btn' type="submit">
-                  Play!⚽️
-              </button>
+              <div id="calendar">
+                <div class="bootstrap-iso">
+                  <div class="container-fluid">
+                   <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                 
+                     <!-- Form code begins -->
+                     <form method="post">
+                       <div class="form-group"> <!-- Date input -->
+                         <label class="control-label" for="date">Date</label>
+                         <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                       </div>
+                       <div class="form-group"> <!-- Submit button -->
+                         <button   ></button>
+                         <button name="submit" id="submit" class="btn btn-primary " type="submit" onclick="displayEvent(this)" data-location-name="Slaughter Creek Fields 4" tabindex="0">Play!⚽️</button>
+                       </div>
+                      </form>
+                      <!-- Form code ends --> 
+                 
+                     </div>
+                   </div>    
+                  </div>
+                 </div>
+              </div>
               </form>
             </div>
 
 
              <!-- calendar start -->
-    <section id='step-1'>
-      <div class="row" id="content">
-        <div class="medium-12 columns">
-          <div class="blog-post">
-            <div id="calendar">
-              <div class="bootstrap-iso">
-                <div class="container-fluid">
-                 <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-               
-                   <!-- Form code begins -->
-                   <form method="post">
-                     <div class="form-group"> <!-- Date input -->
-                       <label class="control-label" for="date">Date</label>
-                       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-                     </div>
-                     <div class="form-group"> <!-- Submit button -->
-                       <!-- <button class="btn btn-primary " id="submit" name="submit" type="submit">Submit</button> -->
-                     </div>
-                    </form>
-                    <!-- Form code ends --> 
-               
-                   </div>
-                 </div>    
-                </div>
-               </div>
-            </div>
-
+    <section id='step-3'>
             <!-- The created event -->
             <div id="new-event">
               <table id="location-table"class="hide">
                 <thead>
                   <tr>
-                    <th colspan="5" class="th">Slaughter Creek Fields 4</th>
+                    <th colspan="6" class="th">Slaughter Creek Fields 4</th>
                     
                   </tr>
                   <tr>
@@ -189,6 +183,7 @@
                     <th width="150">Phone Number</th>
                     <th width="150">Email</th>
                     <th width="150">Date</th>
+                    <th width="150">Players</th>
                   </tr>
                 </thead>
                 <tbody id="t-body">
