@@ -79,9 +79,10 @@
                 <label class='q-text' for='contact'>Enter contact information:</label>
                 <input type='tel' placeholder="Phone Number" name='phone' id='phone' class='form-box' />
                 <input type='email' placeholder="Email" name='email' id='email' class='form-box' />
-                <button class='btn' type="submit">
-                  Play!
-              </button>
+                <!-- <button id="submit" class='btn' type="submit"> -->
+                  <!-- Play! -->
+              <!-- </button> -->
+              <button id="submit" onclick="displayEvent(this)" data-location-name="Slaughter Creek Fields 4" tabindex="0"> Play!</button>
               </form>
               <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
               <div class="callout">
@@ -111,7 +112,7 @@
                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
                      </div>
                      <div class="form-group"> <!-- Submit button -->
-                       <button class="btn btn-primary " id="submit" name="submit" type="submit">Submit</button>
+                       <!-- <button class="btn btn-primary " id="submit" name="submit" type="submit">Submit</button> -->
                      </div>
                     </form>
                     <!-- Form code ends --> 
@@ -124,10 +125,10 @@
 
             <!-- The created event -->
             <div id="new-event">
-              <table id="location-table">
+              <table id="location-table"class="hide">
                 <thead>
                   <tr>
-                    <th colspan="4" class="th">Slaughter Creek Fields 4</th>
+                    <th colspan="5" class="th">Slaughter Creek Fields 4</th>
                     
                   </tr>
                   <tr>
@@ -140,22 +141,22 @@
                 </thead>
                 <tbody id="t-body">
                   <tr>
-                    <td>Content Goes Here</td>
-                    <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-                    <td>Content Goes Here</td>
-                    <td>Content Goes Here</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td>Content Goes Here</td>
-                    <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-                    <td>Content Goes Here</td>
-                    <td>Content Goes Here</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td>Content Goes Here</td>
-                    <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-                    <td>Content Goes Here</td>
-                    <td>Content Goes Here</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>

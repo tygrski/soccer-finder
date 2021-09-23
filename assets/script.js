@@ -11,8 +11,8 @@ var locations = [
 var events = new Map();
 // events.set("Slaughter Creek Fields 4",[{teamName: "Paul",teamCaptain: "George", phoneNumber: "512", email: "email", date: "09/04/2021"}]);
 // events.set("Onion Creek Soccer Complex",[{teamName: "Paul",teamCaptain: "George", phoneNumber: "512", email: "email", date: "09/04/2021"}]);
-addEventToMap("Slaughter Creek Fields 4", "Paul", "George", "512", "@email", "10/10/2021");
-addEventToMap("Slaughter Creek Fields 4", "George", "Paul", "512", "@email", "10/10/2021");
+addEventToMap("Slaughter Creek Fields 4", "Wolf", "George", "512-555-5555", "@email", "9/24/2021");
+addEventToMap("Slaughter Creek Fields 4", "Wild Cats", "Rey", "512-123-4567", "@email", "10/25/2021");
 // map display and markers
 
 var map = new google.maps.Map(document.getElementById("map"), {
@@ -31,7 +31,7 @@ for (var i = 0; i < locations.length; i++) {
   marker.addListener("click", (function (marker, i) {
 
     return function () {
-      infowindow.setContent(`<h1>${locations[i][0]}</h1><button onclick="displayEvent(this)" data-location-name="${locations[i][0]}">Check Events</button>`)
+      infowindow.setContent(`<h1>${locations[i][0]}</h1 class="table"><button onclick="displayEvent(this)" data-location-name="${locations[i][0]}"> Events</button>`)
       infowindow.open(map, marker)
 
 
@@ -46,6 +46,8 @@ for (var i = 0; i < locations.length; i++) {
 
 // 
 function displayEvent(evt) {
+  var locationTable = document.querySelector("#location-table");
+  locationTable.removeAttribute("class");
   var tBody = document.querySelector("#t-body");
   const locationName = evt.dataset.locationName;
   
@@ -91,18 +93,33 @@ $(document).ready(function () {
 // calendar section start
 var submitBtn = document.querySelector("#submit");
 var date = document.querySelector("#date");
+var teamName = document.querySelector("#team-name");
+var teamCaptain = document.querySelector("#captain");
+var phoneNumber = document.querySelector("#phone");
+var email = document.querySelector("#email");
 var newEvent = document.querySelector("#new-event");
 console.log(submitBtn);
 //var locationOne = document.querySelector("#location-one").focus();
 submitBtn.addEventListener("click", function () {
   event.preventDefault();
+  
+  var fieldInfo = document.querySelector("table").text;
   $('#startdate').val()
-  console.log(submitBtn);
-  console.log(date);
-  console.log(date.value);
+  //var locationTable = document.querySelector("#location-table");
+  //locationTable.removeAttribute("class");
   var dateValue = date.value;
+  var teamNameValue = teamName.value;
+  var teamCaptainValue = teamCaptain.value;
+  var phoneNumberValue = phoneNumber.value;
+  var emailValue = email.value;
   console.log(dateValue);
-  addEventToMap("Slaughter Creek Fields 4","Chris","john","512","email",dateValue)
+  console.log(teamNameValue);
+  console.log(teamCaptainValue);
+  console.log(phoneNumberValue);
+  console.log(emailValue);
+  console.log(fieldInfo);
+  addEventToMap("Slaughter Creek Fields 4",teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue)
+  // event.preventDefault();
   // create the event list/values
   // var eventHeader = document.createElement("h3");
   // eventHeader.appendChild(dateValue);
