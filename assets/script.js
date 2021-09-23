@@ -91,7 +91,7 @@ button.addEventListener("click", function (e) {
        //append to five day container
         forecastContainerEl.appendChild(forecastEl);
     }
-
+      $('button').hide()
 
        
     });
