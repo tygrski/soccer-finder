@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # soccer-finder
 
 ## Purpose 
@@ -20,3 +21,6 @@ an application to bring people together, that love to play soccer but may find t
 
 ## Contribution
 Paul Barcenas, Travis Tybor, Kaylee Stevens, Ken, Manuel Ramirez
+=======
+
+>>>>>>> ca207442e648bc2c1b350e5853621c814384951b
