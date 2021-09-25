@@ -187,10 +187,13 @@ for (var i = 0; i < locations.length; i++) {
 
 // 
 function displayEvent(evt) {
+  var styleTable = document.querySelector('#new-event');
   var locationTable = document.querySelector("#location-table");
   locationTable.removeAttribute("class");
+  styleTable.classList.remove('hide');
   var tBody = document.querySelector("#t-body");
   const locationName = evt.dataset.locationName;
+  
   
   if (events.has(locationName)) {
     const locationEvents = events.get(locationName);
