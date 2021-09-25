@@ -195,43 +195,14 @@ for (var i = 0; i < locations.length; i++) {
 //   // content:'<h1>Slaughter Creek Fields 4</h1>'
 // });
 
-<<<<<<< HEAD
 // 
-function displayEvent(evt) {
-  var styleTable = document.querySelector('#new-event');
-=======
+  
 function displayEvent(location) {
->>>>>>> d4bf4749b060941e34289fd694f0339075f2d7f7
+  var styleTable = document.querySelector('#new-event');
   var locationTable = document.querySelector("#location-table");
   locationTable.removeAttribute("class");
   styleTable.classList.remove('hide');
   var tBody = document.querySelector("#t-body");
-<<<<<<< HEAD
-  const locationName = evt.dataset.locationName;
-  
-  
-  if (events.has(locationName)) {
-    const locationEvents = events.get(locationName);
-    
-
-    // empty out the tbodies
-    tBody.innerHTML = "";
-    // creating new rows 
-    for (let index = 0; index < locationEvents.length; index++) {
-      const locationOfEvent = locationEvents[index];
-
-
-      var row = document.createElement("tr");
-
-      // itterate through the properties in the object
-      for (const property in locationOfEvent) {
-        if (Object.hasOwnProperty.call(locationOfEvent, property)) {
-          const propertyValue = locationOfEvent[property];
-          createCell(propertyValue, row);
-        }
-      }
-
-=======
   var locationEvents = JSON.parse(localStorage.getItem("events")) || [];
   console.log("location events", locationEvents);
   tBody.innerHTML = "";
@@ -268,7 +239,6 @@ function displayEvent(location) {
       row.appendChild(td4);
       row.appendChild(td5);
       row.appendChild(td6);
->>>>>>> d4bf4749b060941e34289fd694f0339075f2d7f7
       tBody.appendChild(row);
 
     }
