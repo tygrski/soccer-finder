@@ -19,4 +19,4 @@ an application to bring people together, that love to play soccer but may find t
 
 
 ## Contribution
-Paul Barcenas, Travis Tybor, Kaylee Stevens, Kenechukwu, Manuel Ramirez
+Paul Barcenas, Travis Tybor, Kaylee Stevens, Ken, Manuel Ramirez
