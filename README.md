@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # soccer-finder
 
 ## Purpose 
