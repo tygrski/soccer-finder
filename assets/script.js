@@ -232,7 +232,8 @@ $(document).ready(function () {
   })
 })
 // calendar section start
-var submitBtn = document.querySelector("#submit");
+var submitBtn = document.querySelector("#play-button");
+var submit = document.querySelector("#submit");
 var date = document.querySelector("#date");
 var teamName = document.querySelector("#team-name");
 var teamCaptain = document.querySelector("#captain");
@@ -240,11 +241,13 @@ var phoneNumber = document.querySelector("#phone");
 var email = document.querySelector("#email");
 var playerAmount = document.querySelector("#player-amount");
 var newEvent = document.querySelector("#new-event");
-
+var locationOptions = document.querySelector("#locations");
+var tableHeader = document.querySelector("#table-header");
 console.log(submitBtn);
 //var locationOne = document.querySelector("#location-one").focus();
 submitBtn.addEventListener("click", function () {
   event.preventDefault();
+  var submit = document.querySelector("#submit");
   
   $('#startdate').val()
   //var locationTable = document.querySelector("#location-table");
@@ -255,22 +258,38 @@ submitBtn.addEventListener("click", function () {
   var phoneNumberValue = phoneNumber.value;
   var emailValue = email.value;
   var playerAmountValue = playerAmount.value;
-
-  // console.log(dateValue);
-  // console.log(teamNameValue);
-  // console.log(teamCaptainValue);
-  // console.log(phoneNumberValue);
-  // console.log(emailValue);
+  var locationOptionsValue = locationOptions.value;
+  var Button = document.createElement("button");
   
-  // console.log(playerAmountValue);
-  addEventToMap("Slaughter Creek Fields 4",teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue,playerAmountValue)
-  // event.preventDefault();
-  // create the event list/values
-  // var eventHeader = document.createElement("h3");
-  // eventHeader.appendChild(dateValue);
-  // console.log(eventHeader);
-  // newEvent.appendChild(eventHeader);
+  // changing to event data id to the corresponding data
+  if (locationOptionsValue === "Onion Creek Soccer Complex"){
+      tableHeader.innerHTML=locations[1][0];
+      submit.setAttribute("data-location-name", locations[1][0]);
+      submitBtn.appendChild(submit);
 
+    addEventToMap(locations[1][0],teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue,playerAmountValue)
+  } else if (locationOptionsValue === "Tillery Fields"){
+    tableHeader.innerHTML=locations[2][0];
+    submit.setAttribute("data-location-name", locations[2][0]);
+      submitBtn.appendChild(submit);
+    addEventToMap(locations[2][0],teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue,playerAmountValue)
+  } else if (locationOptionsValue === "Sanchez Soccer Field"){
+    tableHeader.innerHTML=locations[3][0];
+    submit.setAttribute("data-location-name", locations[3][0]);
+      submitBtn.appendChild(submit);
+    addEventToMap(locations[3][0],teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue,playerAmountValue)
+  } else if (locationOptionsValue === "Quarry Field"){
+    tableHeader.innerHTML=locations[4][0];
+    submit.setAttribute("data-location-name", locations[4][0]);
+      submitBtn.appendChild(submit);
+    addEventToMap(locations[4][0],teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue,playerAmountValue)
+  } else {
+    tableHeader.innerHTML=locations[0][0];
+    submit.setAttribute("data-location-name", locations[0][0]);
+    
+    submitBtn.appendChild(submit);
+  addEventToMap(locations[0][0],teamNameValue,teamCaptainValue,phoneNumberValue,emailValue,dateValue,playerAmountValue)
+  }
 })
 
 // create cell add to row
@@ -291,4 +310,20 @@ function addEventToMap(fieldName, teamName, teamCaptain, phoneNumber, email, dat
   }
 }
 // calendar section end
+
+
+ 
+function createButton() {
+    let test = document.querySelector("#play-button");
+    var Button = document.createElement("button");
+    Button.setAttribute("Name", "submit");
+    Button.setAttribute("id", "submit");
+    Button.setAttribute("class", "btn btn-primary");
+    Button.setAttribute("type", "submit");
+    Button.setAttribute("onclick", "displayEvent(this)");
+    Button.innerHTML = "Play!⚽️";
+    test.appendChild(Button);
+  Button.appendChild(nameEl);
+  }
+createButton();
 
