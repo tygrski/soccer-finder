@@ -1,3 +1,17 @@
+.table-style {
+    padding: 40px 5px;
+    margin-top: 40px;
+    margin-left: 24px;  
+    border:#ffef0a solid 5px;
+    border-radius: 10px;
+    border-style: groove;
+    font-size: 24px;
+    color: #024e76;
+    width: 100%;
+    background-color:rgba(255, 239, 10, 0.5);
+   
+}
+
 .hero-img {
     background-image: url(./imgs/soccer-hero.jpeg);
     background-size: cover;
@@ -99,24 +113,16 @@ a {
     font-size: 24px;
     border-radius: 10px;
 }
-footer {
-    background-image: url(./imgs/footer.jpg);
-    background-size:cover;
-    background-position:center;
-    margin-top: 100px;
-    width: 100;
-    height: 100;
-    
-    
-    
-}
+
 footer h2 {
-    padding: 100px;
+    padding-top: 100px;
+    margin-left: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
-    text-align: bottom; 
-    color: white;
+    text-align: center; 
+    color: #fea520;
 }
+
 
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */

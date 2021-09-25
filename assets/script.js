@@ -196,9 +196,13 @@ for (var i = 0; i < locations.length; i++) {
 //   // content:'<h1>Slaughter Creek Fields 4</h1>'
 // });
 
+// 
+  
 function displayEvent(location) {
+  var styleTable = document.querySelector('#new-event');
   var locationTable = document.querySelector("#location-table");
   locationTable.removeAttribute("class");
+  styleTable.classList.remove('hide');
   var tBody = document.querySelector("#t-body");
   var locationEvents = JSON.parse(localStorage.getItem("events")) || [];
   console.log("location events", locationEvents);
