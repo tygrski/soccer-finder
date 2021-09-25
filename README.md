@@ -13,11 +13,10 @@ an application to bring people together, that love to play soccer but may find t
 * jquery
 ## Web api's
 
-## Screen Shot
+## Screen Shot![Screenshot (245)](https://user-images.githubusercontent.com/77369211/134783907-3e9c9250-6363-41b7-b2a5-5b3f0872dfc8.png)
+
 ![soccer-finder](assets/images/.png)
 ## Websites
-
-
 
 ## Contribution
 Paul Barcenas, Travis Tybor, Kaylee Stevens, Ken, Manuel Ramirez
