@@ -1,15 +1,23 @@
 
-# soccer-finder
+# Pick-A-Kick
 
 ## Purpose 
 an application to bring people together, that love to play soccer but may find themself needing players to play against in the Austin area.
+
+## User Story
+As a soccer player in the Austin, Texas area I want to find a local pick-up game to practice with myself, a team, or others. 
+When user enters the website they can check the weather 
+Then I choose a field I want to go to on Google Maps
+Then user enters their teams information
+Submit information then
+User then is presented and has access to teams and games with other players to schedule in my area. 
+
 ## Built with 
 * HTML
 * CSS
 * JS
 * foundation
 * bootstrap
-* foundation
 * jquery
 
 ## Web CDN's
@@ -29,9 +37,13 @@ http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=3
 ## Screen Shot![website-screenshot](https://user-images.githubusercontent.com/77369211/134783907-3e9c9250-6363-41b7-b2a5-5b3f0872dfc8.png)
 
 ## Websites
+Live link : https://tygrski.github.io/soccer-finder/
+
+## Github Repo Link
+https://github.com/tygrski/soccer-finder
 
 ## Contribution
-Paul Barcenas, Travis Tybor, Kaylee Stevens, Ken, Manuel Ramirez
-=======
+Paul Barcenas, Travis Tybor, Kaylee Stevens, Kenechukwu Ilochonwu, Manuel Ramirez
 
->>>>>>> ca207442e648bc2c1b350e5853621c814384951b
+
+© 2021 project-group-1-error-404
