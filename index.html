@@ -40,7 +40,7 @@
       
       <div id="disappear" class="btn-color container">
         <div id="dose" class="row justify-content-center">
-          <button type="button" class="btn btn-light text-dark p-2 m-3" style="display: block;" id="btn">Display Weather Forecast</button>
+          <button type="button" class="wbtn btn-light text-dark p-2 m-3" style="display: block;" id="btn">Display Weather Forecast</button>
         </div>
       </div>
 
@@ -76,43 +76,43 @@
     </section>
 
     <!-- begin about us -->
-    <setion id='about-us'>
+    <section id='about-us'>
       <div class='medium-12 columns text-center'>
         <div class='about-me' id='abt-me'>
           <h2 class='about-text'>About Us:</h2>
           <p class='primary-border'>As a colabrative effort to bring together the local soccer community in Austin,TX we have created this scheduler for you to find other soccer teams and players to improve your skills!</p>
         </div> 
       </div>
-    </setion>
+    </section>
     <!-- about us end -->
 
 
-    
+
     <!-- step 1 start -->
     <section id='step-1' >
-      <div class="row" id="content">
+      <div class="columns" id="content">
         <div class="medium-12 columns">
           <div class="blog-post">
             <h3 class='step-1'>Step 1: <medium>Select your playing field!</medium></h3>
             <!-- Insert map -->
           </div>
       </div>
-    </section
+    </section>
 
     <!-- map display -->
     <div id='map'></div>
-    <section>
-      <p>Your fileds :</p>
-       <ul id="selected-fields">
+    
+      <p class='step-1'>Your fields :</p>
+       <ul class='step-1' id="selected-fields">
        </ul>
-   </section>
+   
 
     <!-- step one end -->
 
     <!-- step two start -->
-    <section id='step-2' class='form'>
+    <section class='form'>
       <div class="row" id="content">
-        <div class="blog-post">
+        <div class="blog-post medium-12 coloums">
           <h3 class='step-1'>Step 2: <medium>Tell everyone about your team!</medium></h3>
 
           <!-- form start -->
@@ -139,48 +139,52 @@
                 <label class='q-text' for='contact'>Enter contact information:</label>
                 <input type='tel' placeholder="Phone Number" name='phone' id='phone' class='form-box' />
                 <input type='email' placeholder="Email" name='email' id='email' class='form-box' />
-                <button class='btn' type="submit">
-                  Play!⚽️
-              </button>
+              <div id="calendar">
+                <div class="bootstrap-iso">
+                  <div class="container-fluid">
+                   <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                 
+                     <!-- Form code begins -->
+                     <form method="post">
+                       <div class="form-group"> <!-- Date input -->
+                         <label class="control-label" for="date">Date</label>
+                         <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                       </div>
+                       <select type='text' placeholder="Pick Location" name='location' id='locations' class='form-box'>
+                        <option value="Slaughter Creek Fields 4">Slaughter Creek Fields 4</option>
+                        <option value="Onion Creek Soccer Complex">Onion Creek Soccer Complex</option>
+                        <option value="Tillery Fields">Tillery Fields</option>
+                        <option value="Sanchez Soccer Field">Sanchez Soccer Field</option>
+                        <option value="Quarry Field">Quarry Field</option>
+                       </select>
+                        
+                       <div class="form-group"> <!-- Submit button -->
+                         
+                         <!-- <button name="submit" id="Onion-Creek" class="btn btn-primary " type="submit" onclick="displayEvent(this)" data-location-name="Onion Creek Soccer Complex" tabindex="0">Onion Creek</button> -->
+                         <!-- <button name="submit" id="submit" class="btn btn-primary" type="submit" onclick="displayEvent(this)" data-location-name="Slaughter Creek Fields 4" tabindex="0">Play!⚽️</button> -->
+                          <div id="play-button"></div>
+                       </div>
+                      </form>
+                      <!-- Form code ends --> 
+                 
+                     </div>
+                   </div>    
+                  </div>
+                 </div>
+              </div>
               </form>
             </div>
 
 
              <!-- calendar start -->
-    <section id='step-1'>
-      <div class="row" id="content">
-        <div class="medium-12 columns">
-          <div class="blog-post">
-            <div id="calendar">
-              <div class="bootstrap-iso">
-                <div class="container-fluid">
-                 <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-               
-                   <!-- Form code begins -->
-                   <form method="post">
-                     <div class="form-group"> <!-- Date input -->
-                       <label class="control-label" for="date">Date</label>
-                       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-                     </div>
-                     <div class="form-group"> <!-- Submit button -->
-                       <!-- <button class="btn btn-primary " id="submit" name="submit" type="submit">Submit</button> -->
-                     </div>
-                    </form>
-                    <!-- Form code ends --> 
-               
-                   </div>
-                 </div>    
-                </div>
-               </div>
-            </div>
-
+    <section id='step-3'>
             <!-- The created event -->
             <div id="new-event">
               <table id="location-table"class="hide">
                 <thead>
                   <tr>
-                    <th colspan="5" class="th">Slaughter Creek Fields 4</th>
+                    <th id="table-header"colspan="6" class="th">Slaughter Creek Fields 4</th>
                     
                   </tr>
                   <tr>
@@ -189,6 +193,7 @@
                     <th width="150">Phone Number</th>
                     <th width="150">Email</th>
                     <th width="150">Date</th>
+                    <th width="150">Players</th>
                   </tr>
                 </thead>
                 <tbody id="t-body">
@@ -212,21 +217,44 @@
                   </tr>
                 </tbody>
               </table>
+              <!-- <table id="location-table"class="hide">
+                <thead>
+                  <tr>
+                    <th colspan="6" class="th">Onion Creek Soccer Complex</th>
+                    
+                  </tr>
+                  <tr>
+                    <th width="200">Team Name</th>
+                    <th>Team Captain</th>
+                    <th width="150">Phone Number</th>
+                    <th width="150">Email</th>
+                    <th width="150">Date</th>
+                    <th width="150">Players</th>
+                  </tr>
+                </thead>
+                <tbody id="t-body">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table> -->
             </div>
-            <h3>Step 1: <medium>Select your playing field!</medium></h3>
             
-            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-            <div class="callout">
-              <ul class="menu simple">
-                <li><a href="#">Author: Mike Mikers</a></li>
-                <li><a href="#">Comments: 3</a></li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <!-- calendar ends -->
-          </section>
-
 
     
 
