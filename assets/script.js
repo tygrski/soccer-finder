@@ -43,7 +43,7 @@ var forecastContainerEl = document.querySelector("#fiveday-container");
 button.addEventListener("click", function (e) {
   e.preventDefault();
   //var nextEl = document.querySelector("#next-btn");
-  var openWeatherForecastUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=3f698036d7cb81fb192ca1a1ad2af845`;
+  var openWeatherForecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=3f698036d7cb81fb192ca1a1ad2af845`;
 
   fetch(openWeatherForecastUrl)
     .then(function (response) {
@@ -129,7 +129,7 @@ button.addEventListener("click", function (e) {
 
 
       var iconTitle = document.createElement("img");
-      iconTitle.setAttribute("src", `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`);
+      iconTitle.setAttribute("src", `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`);
 
       var number = document.createElement("span");
       number.textContent = Math.round(response.main.temp) + " °F";
