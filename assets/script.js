@@ -105,8 +105,6 @@ button.addEventListener("click", function (e) {
         forecastContainerEl.appendChild(forecastEl);
       }
 
-      $('button').hide()
-
     });
 
   var openWeatherCurrentUrl = `https://api.openweathermap.org/data/2.5/weather?q=Austin&units=imperial&appid=3f698036d7cb81fb192ca1a1ad2af845`;
