@@ -104,6 +104,10 @@ a {
     font-size: 24px;
     border-radius: 10px;
 }
+#play-button{
+   width: fit-content;
+}
+
 .wbtn {
     color: #3069c5;
     background-color: rgba(202, 160, 207, 0.7);
