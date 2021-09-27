@@ -29,7 +29,7 @@ var playerAmount = document.querySelector("#player-amount");
 var newEvent = document.querySelector("#new-event");
 var locationOptions = document.querySelector("#locations");
 var tableHeader = document.querySelector("#table-header");
-
+var displaymessage = document.querySelector("#msg");
 var forecastContainerEl = document.querySelector("#fiveday-container");
 
 
@@ -287,17 +287,21 @@ submitBtn.addEventListener("click", function () {
     players: playerAmountValue,
 
   };
-  var localStorageEvents = JSON.parse(localStorage.getItem("events")) || [];
+  
+if(dateValue ==="" || teamNameValue ==="" || teamCaptainValue ==="" || phoneNumberValue === "" || emailValue === "" || playerAmountValue ==="" || locationOptionsValue === ""){
+    console.log("its empty");
+    displaymessage.removeAttribute("class");
+  } else {
+    displaymessage.setAttribute("class", "hide");
+    var localStorageEvents = JSON.parse(localStorage.getItem("events")) || [];
   localStorageEvents.push(newEvent);
   localStorage.setItem("events", JSON.stringify(localStorageEvents))
-
   //getSavedEvents();
   // changing to event data id to the corresponding data
   if (locationOptionsValue === "Onion Creek Soccer Complex") {
     tableHeader.innerHTML = locations[1][0];
     submit.setAttribute("data-location-name", locations[1][0]);
     submitBtn.appendChild(submit);
-
     addEventToMap(locations[1][0], teamNameValue, teamCaptainValue, phoneNumberValue, emailValue, dateValue, playerAmountValue)
   } else if (locationOptionsValue === "Tillery Fields") {
     tableHeader.innerHTML = locations[2][0];
@@ -317,13 +321,11 @@ submitBtn.addEventListener("click", function () {
   } else {
     tableHeader.innerHTML = locations[0][0];
     submit.setAttribute("data-location-name", locations[0][0]);
-
     submitBtn.appendChild(submit);
     addEventToMap(locations[0][0], teamNameValue, teamCaptainValue, phoneNumberValue, emailValue, dateValue, playerAmountValue)
   }
-
   displayEvent();
-
+  }
 })
 
 // create cell add to row
