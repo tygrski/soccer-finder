@@ -143,9 +143,8 @@ button.addEventListener("click", function (e) {
       currentDescription.appendChild(number);
       currentDescription.appendChild(text);
 
-
     });
-   
+     $('#btn').hide();
 });
 
 // google map fields markers
