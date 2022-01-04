@@ -162,7 +162,7 @@ const infowindow = new google.maps.InfoWindow();
 var events = new Map();
 
 
-
+// set default location (Austin: LatLng)
 var map = new google.maps.Map(document.getElementById("map"), {
   zoom: 10,
   center: new google.maps.LatLng(30.266666, -97.73333),
