@@ -168,7 +168,7 @@ var map = new google.maps.Map(document.getElementById("map"), {
   center: new google.maps.LatLng(30.266666, -97.73333),
 });
 
-// lop through locations array
+// lop through filed markers/locations array
 for (var i = 0; i < locations.length; i++) {
   // console.log(locations[i][1], locations[i][2]);
 
