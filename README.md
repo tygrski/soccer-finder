@@ -1,6 +1,9 @@
 
 # Pick-A-Kick
 
+## Website https://tygrski.github.io/soccer-finder/
+
+
 ## Purpose 
 an application to bring people together, that love to play soccer but may find themself needing players to play against in the Austin area.
 
