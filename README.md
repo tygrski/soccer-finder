@@ -3,7 +3,7 @@
 
 ## Live Link Website https://tygrski.github.io/soccer-finder/
 
-## To run this app. Download the cope and paste the [repo}(https://github.com/tygrski/soccer-finder). Open the HTML page in your browser. 
+## To run this app. Download the cope and paste the [repo](https://github.com/tygrski/soccer-finder). Open the HTML page in your browser. 
 ## Purpose 
 An application to bring people together, that love to play soccer but may find themself needing players to play against in the Austin area.
 
