@@ -5,7 +5,7 @@
 
 
 ## Purpose 
-an application to bring people together, that love to play soccer but may find themself needing players to play against in the Austin area.
+An application to bring people together, that love to play soccer but may find themself needing players to play against in the Austin area.
 
 ## User Story
 As a soccer player in the Austin, Texas area I want to find a local pick-up game to practice with myself, a team, or others. 
